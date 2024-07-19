@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Website.com</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    nav {
+        padding: 0 50px;
+        width: 100%;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-one {
+        background-color: darkblue;
+        color: white;
+        height: 40px;
+        cursor: pointer;
+
+    }
+
+    .left>div+div {
+        margin-left: 40px;
+    }
+
+    .right>div {
+        margin-left: 40px;
+    }
+
+    .left>div:hover,
+    .right>div:hover {
+        color: white;
+        transition: all 0.5s;
+    }
+
+    span {
+        margin-left: 50px;
+    }
+
+    .navbar-second {
+        background-color: ghostwhite;
+        height: 40px;
+        position: sticky;
+
+        top: 0;
+    }
+
+    .navbar-second:hover {
+        background-color: ghostwhite;
+        height: 40px;
+        position: sticky;
+        top: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 16px;
+        margin-left: 30px;
+        color: black;
+        font-weight: 400;
+    }
+
+    a:hover {
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 16px;
+        margin-left: 30px;
+        color: gold;
+        font-weight: 400;
+    }
+
+    .logo {
+        text-transform: uppercase;
+        font-size: 20px;
+        cursor: pointer;
+        color:navy;
+    }
+
+    .button1 {
+        margin-left: 30px;
+        border: 1px, ghostwhite;
+        height: 30px;
+        width: 70px;
+
+    }
+
+    .button1:hover {
+        height: 30px;
+        width: 70px;
+        border: 1px, solid ghostwhite;
+        color: white;
+        font-style: initial;
+        margin-left: 30px;
+    }
+
+
+    .carousel-cell1 {
+        width: 100%;
+        height: 600px;
+        background: skyblue;
+    }
+
+    .heading {
+        margin-top: 175px;
+        font-size: 55px;
+        color:dodgerblue;
+
+    }
+
+    .side {
+        height: 450px;
+        width: 1000px;
+        margin-top: 150px;
+
+    }
+
+    .main{
+        display: flex;
+    }
+
+    .heading00 {
+        margin-left: 550px;
+        font-size: 24px;
+        margin-top: 50px;
+        color:gold;
+    }
+
+.dot{
+    display: flex;
+}
+
+.dot1{
+    height: 22px;
+    width: 40px;
+    background-color: gold;
+    margin-left: 350px;
+    margin-top: 20px;
+}
+
+.dot2{
+
+    height: 22px;
+    width: 40px;
+    background-color: gold;
+    margin-left: 20px; 
+    margin-top: 22px;
+}
+
+.icon1{
+    height: 10px;
+    width: 10px;
+}
+
+.icon2{
+    height: 10px;
+    width: 10px;
+    padding-top: 7px;
+}
+
+.icon3{
+    height: 10px;
+    width: 10px;
+}
+
+.icon4{
+    height: 10px;
+    width: 10px;
+}
+
+    .heading01 {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    .heading03 {
+        margin-top: 5px;
+        font-size: 18px;
+        margin-left: 110px;
+    }
+
+    .heading33 {
+        margin-top: 5px;
+        font-size: 18px;
+        margin-left: 110px;
+    }
+
+    .heading333{
+        margin-top: 5px;
+        font-size: 18px;
+        margin-left: 110px;
+    }
+
+
+
+    .heading3333 {
+        margin-top: 5px;
+        font-size: 18px;
+        margin-left: 110px;
+    }
+
+    .name1{
+        margin-left: 110px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+
+    .border1 {
+        width: 580px;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid black;
+        margin-left: 250px;
+        margin-top: 100px;
+        font-family: 'Open Sans';
+        font-size: 16px;
+
+
+    }
+
+    .border1:hover {
+        width: 580px;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid black;
+        margin-left: 250px;
+        margin-top: 100px;
+        background: white;
+        font-family: 'Open Sans';
+        font-size: 16px;
+    }
+
+
+    .border2 {
+        width: 580px;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid black;
+        margin-left: 250px;
+        margin-top: 30px;
+        font-family: 'Open Sans';
+        background: gold;
+    }
+
+    .border2:hover {
+        width: 580px;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid black;
+        margin-left: 250px;
+        margin-top: 30px;
+        background: white;
+        font-family: 'Open Sans';
+    }
+
+    .border3 {
+        width: 580px;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid black;
+        margin-left: 250px;
+        margin-top: 30px;
+        font-family: 'Open Sans';
+        background: gold;
+    }
+
+    .border3:hover {
+        width: 580px;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid black;
+        margin-left: 250px;
+        margin-top: 30px;
+        background: white;
+        font-family: 'Open Sans';
+    }
+
+    .border4 {
+        width: 580px;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid black;
+        margin-left: 250px;
+        margin-top: 30px;
+        font-family: 'Open Sans';
+        background: gold;
+    }
+
+    .border4:hover {
+        width: 580px;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid black;
+        margin-left: 250px;
+        margin-top: 30px;
+        background: white;
+        font-family: 'Open Sans';
+    }
+
+
+
+    .button2 {
+        margin-left: 20px;
+        height: 50px;
+        width: 200px;
+        background-color: blue;
+        border-radius: 30px;
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+    .button2:hover {
+        height: 50px;
+        width: 200px;
+        color: white;
+        background: black;
+        font-style: initial;
+        margin-left: 20px;
+        border-radius: 30px;
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .main3 {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 200px;
+    }
+
+    .flex01 {
+
+height: 750px;
+width: 800px;
+background: darkblue;
+}
+
+
+.flex02 {
+height: 750px;
+width: 950px;
+background: white;
+
+}
+
+.main7 {
+display: flex;
+}
+
+.flexpic {
+height: 700px;
+width: 700px;
+
+
+
+
+
+}
+
+.flextext {
+margin-left: 50px;
+margin-top: 150px;
+font-size: 60px;
+color:cornflowerblue;
+
+}
+
+.heading04 {
+margin-left: 70px;
+margin-top: 200px;
+font-size: 18px;
+color: gold;
+}
+
+.heading05 {
+margin-left: 70px;
+font-size: 25px;
+color: white;
+margin-top: 15px;
+}
+
+
+.heading06 {
+margin-left: 70px;
+color: white;
+margin-top: 20px;
+font-size: 15px;
+
+}
+
+.button4 {
+margin-left: 80px;
+height: 50px;
+width: 200px;
+background-color: yellow;
+border-radius: 30px;
+font-size: 20px;
+margin-top: 30PX;
+}
+
+.button4:hover {
+height: 50px;
+width: 200px;
+color: black;
+background: white;
+font-style: initial;
+margin-left: 80px;
+border-radius: 30px;
+font-size: 20px;
+margin-top:30PX;
+}
+
+.dot3{
+    display: flex;
+}
+
+.dot4{
+    height: 22px;
+    width: 20px;
+    background-color: gold;
+    margin-left: 500px; 
+    margin-top: 130px;
+}
+
+.dot5{
+    height: 22px;
+    width: 20px;
+    background-color: gold;
+    margin-left: 30px; 
+    margin-top: 130px;
+}
+
+
+    .heading8 {
+        margin-left:30px;
+        font-size: 30px;
+        margin-top: 100px;
+    }
+
+    
+    .main111 {
+        height: 200px;
+        width: 600px;
+        background-color: gold;
+        position: relative;
+        top: 100px;
+        left: 200px;
+
+    }
+
+
+
+
+
+    .child1 {
+        height: 180px;
+        width: 180px;
+        background-color: white;
+        border-radius: 150px;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+    }
+
+    .child2 {
+        height: 200px;
+        width: 660px;
+        background-color: darkblue;
+        position: relative;
+        left: 430px;
+        bottom: 40px;
+    }
+
+
+
+    .position1 {
+        position: relative;
+        left: 40px;
+        top: 30px;
+        color: white;
+        font-size: 25px;
+    }
+
+
+
+
+    .position2 {
+        position: absolute;
+        top: 80px;
+        left: 40px;
+        color: white;
+        font-size: 15px;
+    }
+
+
+
+
+    .formbg {
+        background-color: navy;
+        width: 1436px;
+        height: 1400px;
+        margin-top: 100px;
+    }
+
+
+.line{
+    height: 1px;
+    width: 1150px;
+    background-color: white;
+margin-top: 100px;
+margin-left:100px ;
+}
+
+
+.line0{
+    display: grid;
+}
+
+
+    .form1 {
+        margin-left: 100px;
+        padding-top: 100px;
+        color: white;
+        font-size: 20px;
+    }
+
+
+    .form2{
+        margin-left: 100px;
+        height: 70px;
+        width: 600px;
+    }
+
+
+
+    .form4 {
+        margin-top: 50px;
+    }
+
+
+    .map{
+        display: flex;
+    }
+
+
+
+    .map1{
+margin-left: 50px;
+padding-top: 50px;
+    }
+
+
+
+    .form3 {
+        margin-left: 100px;
+        height: 200px;
+        width: 600px;
+    }
+
+    .button3 {
+        margin-left: 100px;
+        height: 40px;
+        width: 80px;
+        background-color: gold;
+        font-size: 15px;
+        margin-top: 30PX;
+    }
+
+    .button3:hover {
+        margin-left: 100px;
+        height: 40px;
+        width: 80px;
+        background-color: white;
+        font-size: 15px;
+        margin-top: 30PX;
+    }
+
+
+.form10{
+    display: flex;
+}
+
+.form6{ color: white;
+    margin-left: 100px;
+    padding-top: 70px;
+
+}
+
+
+.form7{
+color: white;
+margin-left: 80px;
+padding-top: 80px;
+}
+
+
+.growing{
+    font-size: 40px;
+}
+
+.about{
+    font-size: 25px;
+}
+
+
+.form8{
+    color: white;
+    margin-left: 200px;
+    padding-top: 80px;
+    font-size: 25px;
+}
+
+.form11{ 
+    height: 40px;
+    width: 300px;
+
+}
+
+
+.button7{
+        
+        height: 40px;
+        width: 100px;
+        background-color:yellow;
+        font-size: 15px;
+        margin-top: 30PX;
+    }
+
+    
+
+</style>
+
+<body>
+    <nav class="navbar-one flex">
+        <div class="left flex">
+            <div class="right flex">
+                <div class="Location">
+                    <span>Location</span>
+                </div>
+                <div class="email">
+                    <span>info@yourdomain.com</span>
+                </div>
+                <div class="call">
+                    <span>+91 112 33 44 55</span>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <nav class="navbar-second flex">
+        <div class="logo">
+            <h3>Growing</h3>
+        </div>
+        <ul class="flex">
+            <li><a href="..\html\website design.html">Home</a></li>
+                    <li><a href="../html/about us.html">About Us</a></li>
+                    <li><a href="..\html\services .html">Services</a></li>
+                    <li><a href="..\html\contact us.html">Contact Us</a></li>
+                    <li><a href="../html/news.html">News</a></li>
+                    <li><a href="..\html\custumer.html">Customer</a></li>
+                    <li><a href="..\html\singup.html">Signup</a></li>
+                    <li><a href="..\html\login.html"><button class="button1">LOGIN</button></a></li>
+        </ul>
+    </nav>
+
+
+    <div class="carousel-cell1">
+        <div class="main">
+            <img src="../media/banner-img-removebg-preview.png" class="side">
+            <h1 class="heading">Clever <br>Investing<br> makes Your<br> Money Grow</h1>
+        </div>
+
+        <div class="heading00">WHAT WE DO</div>
+<div class="main">
+        <div class="dot">
+            <div class="dot1"></div>
+            <div class="heading01"><h1>Our Expertize & Service</h1></div>
+            <div class="dot2"></div>
+         </div>
+        </div>
+
+        
+<div class="border1">
+    <div class="icon1"><img src="../media/icon-1-removebg-preview.png" alt=""></div>
+<div class="name1">VISION TO PLAN</div>
+<div class="heading03">Completely synergize resource taxing relationships via niche markets. Completely synergize resource taxing.</div>
+
+</div>
+<div class="border2">
+    <div class="icon2"><img src="../media/icon-2.png" alt=""></div>
+<div class=name1>GROWTH TO VISION</div>
+    <div class="heading33">Completely synergize resource taxing relationships via niche markets. Completely synergize resource taxing.</div>
+</div>
+<div class="border3">
+    <div class="icon3"><img src="../media/icon-3.png" alt=""></div>
+    <div class="name1" >MARKET TO GROWTH</div>
+        <div class="heading333">Completely synergize resource taxing relationships via niche markets. Completely synergize resource taxing.</div>
+        </div>
+
+<div class="border4">
+    <div class="icon4"><img src="../media/icon-4.png" alt=""></div>
+        <div class="name1">PLAN TO MARKET</div>
+            <div class="heading3333">Completely synergize resource taxing relationships via niche markets. Completely synergize resource taxing.</div>
+
+            <button class="button2">READ MORE</button>
+            </div>
+
+        
+        
+
+
+    <div class="main3">
+
+        <div class="flex01">
+            <div class="heading04">
+                <h2>ADVANCED SERVICE</h2>
+            </div>
+            <div class="heading05">
+                <h1>Data Analytics</h1>
+            </div>
+            <div class="heading06">It is a long established fact that a reader will be distracted by the readable
+                content of a page when looking at its layout.The point of using Lorem Ipsum is that it has a
+                more-or-less normal distribution of letters, as opposed to using'Content here, content here',
+                making it</div>
+            <button class="button4"><b>Read More</b></button>
+        </div>
+        <div class="flex02">
+            <div class="main7">
+                <div>
+                    <h1 class="flextext">Your<br>Money<br>Grow</h1>
+                </div>
+                <div><img src="../media/img-2 (1).png" class="flexpic"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="dot3">
+       <div class="dot4"></div>
+       <div class="heading8"><h1>Testimonial</h1></div>
+       <div class="dot5"></div>
+    </div>
+
+
+
+
+
+    <div class="main-carousel">
+        <div class="carousel-cell2">
+
+    <div class="main111">
+        <div class="child1"> <img src="../media/img-3.png"></div>
+    </div>
+
+    <div class="child2">
+        <div class="position1"><b>Kamlioo</b></div>
+
+        <div class="position2">It is a long established fact that a reader will be distracted by the readable content of
+            a<br> page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-<br>less
+            normal distribution of letters, as opposed to using 'Content here,<br> content here', making it</div>
+    </div>
+    
+    </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="formbg">
+
+        <div class="line0">
+        
+            <div class="line"></div>
+
+            <div class="form1">
+            <h1>Contact Us</h1>
+            </div>
+        </div>
+        <div class="map">
+        <div class="form4">
+            <input type="text" class="form2" id="Name" placeholder=" Name"><br><br>
+            <input type="text" class="form2" id="Email" placeholder="Email"><br><br>
+            <input type="text" class="form2" id="Subject" placeholder=" Subject"><br><br>
+            <input type="text" class="form3" id="Massage" placeholder="Massage"><br><br>
+
+            <button class="button3">Send</button><br>
+
+        </div>
+
+        
+        <div class="map1"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.269461947604!2d71.69003257453855!3d29.39167237525884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b91f4a89601cd%3A0xaf34dd6c1d59a43a!2sCodes%20Thinker!5e0!3m2!1sen!2s!4v1719216733347!5m2!1sen!2s" width="500" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+
+
+<div class="form10">
+        <div class="form6"><h1 class="growing">GROWING </h1><br>It is a long established fact that a<br> reader will be distracted by the <br>readable content of a page when<br>
+            looking at its layout. The point of<br> using Lorem Ipsum is that it has a<br> more-or-less normal distribution of<br>
+            letters, as opposed to using 'Content<br> here, content here', making it</div>
+            <div class="form7"> 
+                
+                <p class="about">About Us</p><br>distracted by the<br> readable content<br> of a page when <br>looking at its <br>layout. The point of <br>using Lorem Ipsum<br> is that it has</div>
+
+                <div class="form8">
+                    <p>Newsletter</p><br>
+
+                    <input type="text" class="form11" id="Email" placeholder=" Enter Your Email"><br>
+
+                    <button class="button7">Send</button><br>
+                </div>
+                 
+
+        </div>
+    </div>
+
+   
+
+    
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+        var elem = document.querySelector('.main-carousel');
+        var flkty = new Flickity(elem, {
+            // options
+            cellAlign: 'left',
+            contain: true,
+          
+        });
+
+        flkty.resize();
+    </script>
+
+<script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
